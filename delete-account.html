@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlateRate — Delete account</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.5; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; color: #111; }
+    h1, h2 { line-height: 1.25; }
+    label { display: block; font-weight: 600; margin-top: 1rem; }
+    input, textarea { width: 100%; max-width: 100%; box-sizing: border-box; padding: 0.5rem; margin-top: 0.25rem; }
+    button { margin-top: 1.25rem; padding: 0.6rem 1rem; font-size: 1rem; cursor: pointer; }
+    .note { background: #f4f6f8; padding: 0.75rem 1rem; border-radius: 8px; }
+    a { color: #0b57d0; }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+  <h1>Delete your PlateRate account</h1>
+  <p>You can delete your account in two ways:</p>
+  <ol>
+    <li><strong>In the app (fastest):</strong> open PlateRate → <strong>Settings</strong> → delete account.</li>
+    <li><strong>On the web:</strong> email us using the details below (required for store policies if you cannot use the app).</li>
+  </ol>
+
+  <div class="note">
+    <p><strong>What deletion removes</strong> (as implemented in our systems): your login, profile data, notifications, blocks, location-sharing data, vehicle/fleet links you own, and content you authored, along with related votes/flags where applicable. Some residual technical logs may be kept for a limited time for security or legal reasons.</p>
+  </div>
+
+  <h2>Request by email</h2>
+  <p>Send an email to <a href="mailto:Pla8r8@gmail.com?subject=Account%20deletion%20request">Pla8r8@gmail.com</a> with:</p>
+  <ul>
+    <li>Subject: <strong>Account deletion request</strong></li>
+    <li>The <strong>email address</strong> registered on the PlateRate account</li>
+    <li>Optional: any extra detail to help us find the account</li>
+  </ul>
+  <p>We will reply to confirm and process verified requests within a reasonable time (and within any legal deadlines).</p>
+
+  <h2>Optional form (opens your email app)</h2>
+  <p>Fill this in, then tap the button. It prepares an email to us — it does not delete anything by itself until we process your request.</p>
+  <form id="deleteForm">
+    <label for="email">Account email</label>
+    <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+    <label for="confirm">Type DELETE to confirm</label>
+    <input id="confirm" name="confirm" type="text" required placeholder="DELETE" />
+
+    <label for="notes">Anything else we should know (optional)</label>
+    <textarea id="notes" name="notes" rows="4" placeholder="Optional"></textarea>
+
+    <button type="submit">Open email to request deletion</button>
+  </form>
+
+  <p style="margin-top:2rem;font-size:0.9rem;color:#444;">This page is part of PlateRate’s account-deletion process described in our <a href="privacy.html">Privacy Policy</a>.</p>
+
+  <script>
+    document.getElementById('deleteForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = document.getElementById('email').value.trim();
+      var confirm = document.getElementById('confirm').value.trim();
+      var notes = document.getElementById('notes').value.trim();
+      if (confirm.toUpperCase() !== 'DELETE') {
+        alert('Please type DELETE to confirm.');
+        return;
+      }
+      var body =
+        'Please delete my PlateRate account.\n\n' +
+        'Account email: ' + email + '\n\n' +
+        (notes ? ('Notes: ' + notes + '\n\n') : '') +
+        'I confirm I am the account holder and I want this account permanently deleted.';
+      var mailto =
+        'mailto:Pla8r8@gmail.com' +
+        '?subject=' + encodeURIComponent('Account deletion request') +
+        '&body=' + encodeURIComponent(body);
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>

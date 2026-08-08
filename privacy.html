@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlateRate — Privacy Policy</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.5; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; color: #111; }
+    h1, h2 { line-height: 1.25; }
+    h2 { margin-top: 2rem; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; vertical-align: top; }
+    a { color: #0b57d0; }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Home</a> · <a href="terms.html">Terms of Use</a> · <a href="delete-account.html">Delete account</a></p>
+  <h1>PlateRate Privacy Policy</h1>
+  <p><strong>Last updated:</strong> 8 August 2026</p>
+  <p><strong>Contact:</strong> <a href="mailto:Pla8r8@gmail.com">Pla8r8@gmail.com</a></p>
+  <p>This policy describes how PlateRate (“we”, “us”, “the app”) handles information when you use our mobile application.</p>
+
+  <h2>1. Who we are</h2>
+  <p>PlateRate is a community app for road users. Contact: <a href="mailto:Pla8r8@gmail.com">Pla8r8@gmail.com</a>.</p>
+  <p>If a registered company becomes the operator, this section will be updated with the legal name and address.</p>
+
+  <h2>2. What the app does</h2>
+  <p>PlateRate lets people:</p>
+  <ul>
+    <li>Report <strong>vehicle issues</strong> and <strong>driving ratings</strong> linked to a number plate</li>
+    <li>Report <strong>road hazards</strong> (for example potholes, flooding, debris) on a map</li>
+    <li>Register <strong>their own plates</strong> to receive notifications</li>
+    <li>Optionally use <strong>Nearby</strong> features and community confirm/dispute tools</li>
+  </ul>
+  <p><strong>Vehicle reports and ratings are anonymous to other users.</strong> Other people do not see who submitted a report, rating, or hazard.</p>
+
+  <h2>3. Information we collect</h2>
+  <h3>Account</h3>
+  <ul>
+    <li>Email address and password (password handled by Firebase Authentication; we do not store your raw password)</li>
+    <li>Email verification status (we send a short-lived 6-digit code to your email; codes expire after about 15 minutes)</li>
+  </ul>
+  <p>We do <strong>not</strong> collect phone numbers, real names, or home addresses as part of normal sign-up.</p>
+
+  <h3>Settings and preferences</h3>
+  <p>Language, theme, tutorial, and similar app preferences stored on your device and/or account.</p>
+
+  <h3>Content you create</h3>
+  <ul>
+    <li>Vehicle issues and ratings: number plate, country, description, rating value, timestamps, and <strong>photo and/or video</strong> evidence</li>
+    <li>Road hazards: category, description, media, and <strong>location of the hazard</strong></li>
+    <li>Reactions (agree/disagree), optional short comments</li>
+    <li>“Claim fixed” / “Hazard gone” claims and related proof photos, plus confirm/dispute votes</li>
+    <li>Flags/abuse reports you submit</li>
+    <li>Plates you register under My Vehicles, optional ownership-verification proof photos, and related dispute/sharing data</li>
+    <li>If you use fleet features: fleet name, membership, plates, and optional company number (UK Companies House lookup)</li>
+  </ul>
+
+  <h3>Location (two different types)</h3>
+  <ol>
+    <li><strong>Hazard location</strong> — precise coordinates for where the hazard is. This describes a place on the road (for example a pothole), not “where you live,” and is not used to identify you to other users.</li>
+    <li><strong>Nearby presence (optional)</strong> — only if you turn it on. Your position is <strong>rounded to a coarse area (about 1.1 km)</strong>, never shared as an exact point with other users. It is only visible to others who have also opted in. Presence expires shortly after you stop sharing or close the app (about 2 minutes after the last update).</li>
+    <li><strong>Optional coarse location on some vehicle reports</strong> — used only to help match nearby corroboration requests; not shown as part of the public report content.</li>
+  </ol>
+
+  <h3>Device and technical data</h3>
+  <ul>
+    <li>Push notification token (Firebase Cloud Messaging)</li>
+    <li>Crash and performance data via <strong>Firebase Crashlytics</strong></li>
+    <li><strong>Firebase Analytics</strong> data about app use</li>
+    <li>Basic technical data needed to run Firebase / Cloud Functions</li>
+  </ul>
+
+  <h3>On-device processing</h3>
+  <p>Before a <strong>photo</strong> is uploaded, the app runs <strong>on-device face detection</strong> (Google ML Kit on your device) and blurs detected faces. Image data for that step is <strong>not</strong> sent to Google for face detection. Face blur can miss some faces (for example side profiles or sunglasses). <strong>Videos are not automatically face-blurred.</strong></p>
+
+  <h2>4. How we use information</h2>
+  <ul>
+    <li>Provide and operate the app (posting, search, maps, notifications, moderation)</li>
+    <li>Notify you when a plate you registered is reported</li>
+    <li>Optional Nearby / corroboration features you enable</li>
+    <li>Prevent abuse (flags, auto-hide after multiple flags, profanity checks, blocking)</li>
+    <li>Verify optional vehicle ownership or fleet company details where you request that</li>
+    <li>Improve stability (Crashlytics) and understand usage (Analytics)</li>
+    <li>Send essential service email (for example verification codes)</li>
+    <li>Comply with law and protect safety and rights</li>
+  </ul>
+  <p><strong>We do not sell your personal data.</strong></p>
+
+  <h2>5. Legal bases (UK GDPR)</h2>
+  <p>Depending on the activity: <strong>contract</strong> (providing the service), <strong>legitimate interests</strong> (security, moderation, reliability), and <strong>consent</strong> where required (for example optional location features).</p>
+
+  <h2>6. Who we share data with</h2>
+  <table>
+    <thead><tr><th>Service</th><th>Role</th></tr></thead>
+    <tbody>
+      <tr><td>Google Firebase / Google Cloud</td><td>Auth, database, functions, messaging, Crashlytics, Analytics</td></tr>
+      <tr><td>Cloudinary</td><td>Storage and delivery of photos/videos</td></tr>
+      <tr><td>Google ML Kit</td><td>On-device face detection only (photos)</td></tr>
+      <tr><td>UK Companies House API</td><td>Optional fleet company-number checks</td></tr>
+      <tr><td>Email (Gmail SMTP via our systems)</td><td>Verification codes to your inbox; occasional moderation alerts to the app operator</td></tr>
+    </tbody>
+  </table>
+
+  <h2>7. Retention</h2>
+  <ul>
+    <li><strong>Vehicle reports / ratings</strong> and related evidence: generally about <strong>30 days</strong>, then removed via automated expiry where configured, unless needed longer for moderation, security, or legal reasons</li>
+    <li><strong>Hazard reports</strong>: generally about <strong>14 days</strong></li>
+    <li><strong>Nearby presence</strong>: minutes-scale; expires after sharing stops</li>
+    <li><strong>Verification codes</strong>: about 15 minutes</li>
+    <li><strong>Account data</strong>: until you delete your account, subject to legal needs</li>
+    <li><strong>Media on Cloudinary</strong>: removed when the related database record is deleted or replaced</li>
+  </ul>
+
+  <h2>8. Your rights</h2>
+  <p>Under UK data protection law you may have rights to access, correct, delete, restrict, or object to certain processing, and to data portability.</p>
+  <p><strong>In-app account deletion:</strong> You can delete your account from <strong>Settings</strong> in the app.</p>
+  <p><strong>Web account deletion request:</strong> Use our <a href="delete-account.html">account deletion request page</a>, or email <a href="mailto:Pla8r8@gmail.com">Pla8r8@gmail.com</a> with the subject “Account deletion request” and the email address on the account. We will verify the request and process it within a reasonable period (and within any time limits required by law).</p>
+  <p>You may contact the <a href="https://ico.org.uk">ICO</a> if you have a complaint.</p>
+
+  <h2>9. Children</h2>
+  <p>PlateRate is not directed at children under <strong>13</strong>. Do not use the app if you are under 13. Where the law of your country requires a higher age for consent to information-society services, you must meet that age. The app may ask you to confirm you meet the minimum age when you create an account.</p>
+
+  <h2>10. Security</h2>
+  <p>We use established providers and access controls. No method of transmission or storage is 100% secure.</p>
+
+  <h2>11. International transfers</h2>
+  <p>Infrastructure providers may process data in the UK, EEA, United States, or other countries under their safeguards where applicable.</p>
+
+  <h2>12. Changes</h2>
+  <p>We may update this policy. The “Last updated” date will change.</p>
+
+  <h2>13. Contact</h2>
+  <p><a href="mailto:Pla8r8@gmail.com">Pla8r8@gmail.com</a></p>
+</body>
+</html>
